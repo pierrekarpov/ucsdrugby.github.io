@@ -41,7 +41,7 @@ var fg_my_content = {
                 // on the main directory level, then simply leave
                 // this empty (like so: gallery_master_folder: '',).
                 
-                main_menu_title: 'Something',
+                main_menu_title: '',
                 
                 // This is the main title for your galleries menu.
                 
