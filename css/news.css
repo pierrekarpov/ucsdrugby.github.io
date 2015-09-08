@@ -1,0 +1,39 @@
+.news_blogs_blog p {
+    font-size: 16px;
+}
+
+.news_blogs_blog img {
+    height: 200px;
+    width: auto;
+    float: left;
+    overflow: hidden;
+    margin: 10px;
+}
+
+#news_blog {
+    padding-top: 0px;
+}
+
+.news_history_article p {
+    font-size: 16px;
+}
+
+.news_history_article img {
+    height: 200px;
+    width: auto;
+    float: right;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.news_game_reports_report p {
+    font-size: 16px;
+}
+
+.news_game_reports_report img {
+    height: 200px;
+    width: auto;
+    float: right;
+    overflow: hidden;
+    margin: 10px;
+}

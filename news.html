@@ -1,0 +1,533 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="UCSD Rugby">
+        <meta name="author" content="Pierre Karpov">
+        <link rel="icon" href="./img/favicon.ico">
+        
+        <!-- CSS -->
+        <link href="./css/main.css" rel="stylesheet">
+        
+        <!-- Bootstrap core CSS -->
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/news.css" rel="stylesheet">
+        
+        <!-- Font Awesome icons-->
+        <link rel="stylesheet" href="./css/font-awesome-4.2.0/css/font-awesome.min.css">
+        
+        <!-- Google fonts-->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,900italic' rel='stylesheet' type='text/css'>
+        <title>UCSD Rugby</title>
+        
+        
+        <!-- Scrips -->
+        <script type="text/javascript">
+
+        
+            function NewsTabClicked(clickedTab) {
+                var clickedDiv = $("#news_" + clickedTab);
+                
+                var blogsDiv = $("#news_blogs");
+                var gameResultsDiv = $("#news_game_reports");
+                var galleryDiv = $("#news_gallery");
+                var historyDiv = $("#news_history");
+                
+                blogsDiv.css("display", "none");
+                gameResultsDiv.css("display", "none");
+                galleryDiv.css("display", "none");
+                historyDiv.css("display", "none");
+                
+                clickedDiv.css("display", "inline");
+                
+                var clickedTab = $("#new_tab_" + clickedTab);
+                
+                var blogsTabDiv = $("#new_tab_blogs");
+                var gameResultsTabDiv = $("#new_tab_game_reports");
+                var galleryTabDiv = $("#new_tab_gallery");
+                var historyTabDiv = $("#new_tab_history");
+                
+                blogsTabDiv.css("color", "#428BCA");
+                gameResultsTabDiv.css("color", "#428BCA");
+                galleryTabDiv.css("color", "#428BCA");
+                historyTabDiv.css("color", "#428BCA");
+                
+                clickedTab.css("color", "#FFD100");
+            };
+
+        </script>
+        
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="./js/jquery.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        
+        
+        <!-- Gellery plugin-->
+        <script type="text/javascript" src="./js/flipgallery/settings.js"></script>
+        <script type="text/javascript" src="./js/flipgallery/flipgallery.min.js"></script>
+    </head>
+    <body onLoad="flipGallery()">
+        <!-- TOP NAV BAR -->
+        <nav class="navbar navbar-default" id="main_nav_bar" role="navigation">
+            <div class="container-fluid">
+                <!-- bg color: style="background-color: #435AA8;" -->
+                <div id="top_nav_top_row" class="row clearfix">
+                    <a class="navbar-nav"  id="top_nav_logo_text" href="./index.html">
+                        <img id="top_nav_logo" style="vertical-align:middle;" src="./img/ucsdLogoTransBig.gif" alt="Home"/>UCSD Rugby</a>
+
+                    <div class="pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a class="nav_links_top active" href="./schedule.html">Schedule</a></li> 
+                            <li><a class="nav_links_top" href="./news.html">News</a></li>
+                            <li><a class="nav_links_top" href="./team.html">Team</a></li>
+                            <li><a class="nav_links_top" href="./contact.html">Contact</a></li>
+                            <li><a class="nav_links_top" target="_blank" href="http://www.active.com/donate/ucsdrugby">Donate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- BREADCRUMB -->
+        
+        <div class="container-fluid">
+            <div class="row" style="height: 36px;">
+                <div class="col-sm=12">
+                    <ol id="breadcrsumb_bar" class="breadcrumb">
+                        <li><a href="./index.html">Home</a></li>
+                        <li class="active">Team</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+        <!-- MAIN DIV -->
+        <div id="main_div" class="container-fluid">
+            <div class="row">
+                <!-- LEFT COL -->
+                <div class="col-sm-2">
+                    <!-- NEXT FIXTURE -->
+                    <div class="panel panel-default transparent_panel">
+                        <div class="panel-heading panel_header_custom">
+                            NEWS
+                        </div>
+                        <div class="panel-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <a id="new_tab_blogs" onclick="NewsTabClicked('blogs');" style="color: #FFD100;">Blogs</a>
+                                </div>
+                                <div class="row">
+                                    <a id="new_tab_game_reports" onclick="NewsTabClicked('game_reports');">Game reports</a>
+                                </div>
+                                <div class="row">
+                                    <a id="new_tab_gallery" onclick="NewsTabClicked('gallery');">Galery</a>
+                                </div>
+                                <div class="row">
+                                    <a id="new_tab_history" onclick="NewsTabClicked('history');">History</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MAIN COL -->
+                <div class="col-sm-10">
+                    <!-- BLOGS -->
+                    <div id="news_blogs">
+                        <div  class="panel panel-default transparent_panel">
+                            <div class="panel-body news_blogs_blog">
+                                <h1>Lead article</h1>
+                                <p><img src="./img/lead_article_img.png"/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+
+                        <div  class="panel panel-default transparent_panel">
+                            <div class="panel-body news_blogs_blog">
+                                <h1>Second article</h1>
+                                <p><img src="./img/StraightOuttaUcsd.jpg"/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+
+                        <div  class="panel panel-default transparent_panel">
+                            <div class="panel-body news_blogs_blog">
+                                <h1>Third article</h1>
+                                <p><img src="./img/GraduationMashup.png"/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END BLOGS-->
+                    
+                    <!-- GAME REPORTS -->
+                    <div id="news_game_reports" style="display: none;">
+                        <div  class="panel panel-default transparent_panel">
+                            <div class="panel-body news_game_reports_report">
+                                <h1>Game result 1</h1>
+                                <p><img src="./img/lead_article_img.png"/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END GAME REPORTS -->
+                    
+                    <!-- GALLERY -->
+                    <div id="news_gallery" style="display: none;">
+                        <div id="flipGallery"></div>
+                    </div>
+                    <!-- END GALLERY -->
+                    
+                    <!-- HISTORY -->
+                    <div id="news_history" style="display: none;">
+                        <div  class="panel panel-default transparent_panel">
+                            <div class="panel-body news_history_article">
+                                <h1>Team history</h1>
+                                <p><img src="./img/lead_article_img.png"/>UCSD Rugby has a long and colorful history. Founded in 1966, the club is one of the oldest sports on campus.  The general attitude of the 1960's and early '70's fostered a perfect source of recruits for the counter culture of rugby. These early years of the "rebel sport" gave way to serious, competitive play in the mid 1970's. In 1975, UCSD captured the Collegiate Championship of the Santa Barbara Tournament, the largest rugby fixture in the West. During this period, UCSD rugby alumnus Peter Sertic took over the head-coaching job and solidified the team with active recruiting, and routinely fielded two sides.<br/>
+The 1984-85 season brought a coaching change; Tom Butler built upon the foundation laid by Coach Sertic. In 1987 UCSD captured the first of three successive Southern California College division rugby championships. Butler also began the tradition of touring every year.<br/>
+The 1989-90 season was the first time the Tritons played in the University Division (DI), making rugby and water polo the only UCSD sports to compete in league play at the Division I level. That season, the Tritons had a respectable league record, and swept the University of San Diego and San Diego State to win the "Kings of the City" title.   In 1992, the Tritons toured overseas for the first time, playing in the Bahamas.  Two UCSD players received the honor of playing for the Bahamian national team. The team returned to the Caribbean the following year, touring Jamaica in 1993.<br/>
+Coach Butler retired following the 1992-93 season. Former assistant coach Mark Stenson took over, and along with Eric Takeuchi sought to continue UCSD's winning ways. Along the way Paul Reynolds and Tim O’Hara joined to help coach the forwards and backs, respectively. The Tritons were the Division II runners-up in 1996, and in 1997 won the Division II Southern California championship.<br/>
+The 1998 team captured the first ever Division II National Championship held by USA Rugby, beating the University of Oregon in the finals in Albany, NY. In the three games in three days format, the Tritons’ superior fitness and skills showed as they outscored their opponents 86-13.<br/>
+In 1999, former captain Troy Meyer joined the coaching staff.  The Tritons again dominated league play, and earned a shot to defend their title at the National Championship in Cincinnati.  UCSD won it all for a second straight season, coming from behind to beat Chico State in the finals, 21-18.  The 1999 squad also took the team’s first-ever European tour, traveling to Wales (the site of the Rugby World Cup later that year) during Spring Break.<br/>
+The Tritons opened the new millennium by moving up to compete in Division I.  They finished a very respectful 5-3 in their first year, narrowly missing a playoff birth.  In 2003, Stenson and Takeuchi stepped aside, and O’Hara and Reynolds took over the coaching duties.  Former player Dave Thomas joined the coaching staff in 2005 after returning to San Diego, and the Tritons continued to compete in the top level of collegiate rugby.<br/>
+O’Hara and Reynolds stepped down from coaching after the 2007 season.  Triton alum Brian Kennedy took over heading into the 2008 campaign.  Takeuchi came out of retirement to coach the backs, and Thomas stayed on to run the forwards.  After the 2008 season, SCRFU realigned the Collegiate Division.  Division One was reduced from ten teams to five, based on 2008 standings.  UCSD was among the five teams relegated, and returned to Division Two competition in 2009.  After that season, SCRFU again realligned, and UCSD was placed in Division Three. The Tritons finished in second place, their only loss by a three-point margin to league champion CSU Fullerton.<br/>
+Based on their strong 2010 performance, the Tritons moved back to Division Two for the 2011 season.  As USA Rugby continued to realign the divisions, UCSD moved into the new 1AA Division for the 2013 season.  Heading into 2014, UCSD is the newly formed Gold Coast Conference of Intercollegiate Rugby, a Socal D1AA conference.  The conference is new, but UCSD faces old foes, including Claremont, Long Beach, Fullerton, and local rival USD.</p>
+                            </div>
+                        </div>
+                        
+                        <div  class="panel panel-default transparent_panel">
+                            <div class="panel-body news_history_article">
+                                <h1>Team honors</h1>
+                                <!-- Table -->
+                                <table class="table">
+                                    <tr>
+                                        <th colspan="2">League Titles</th>
+                                    </tr>
+                                    <tr>
+                                        <td>USA RUGBY DIVISION TWO NATIONAL CHAMPIONS</td>
+                                        <td>1998, 1999</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Souther California RFU Collegiate Division Champions</td>
+                                        <td>1987,1988,1989, 1997,1998,1999</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">Tournament Titles</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Santa Barbara (Gold)</td>
+                                        <td>1975</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Houston Invitational (Bowl)</td>
+                                        <td>1988</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Heartland of America (Cup)</td>
+                                        <td>1989</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Escondido 10's</td>
+                                        <td>1995</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Escondido 7's (Consolation)</td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">Tours</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Bahamas</td>
+                                        <td>1992</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jamaica </td>
+                                        <td>1993</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wales</td>
+                                        <td>1999</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">Tours Hosted</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Lanchester R.F.C.</td>
+                                        <td>1987</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Christ Church U-23</td>
+                                        <td>1988</td>
+                                    </tr>
+                                    <tr>
+                                        <td>US Naval Academy</td>
+                                        <td>1989</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Australian Colts</td>
+                                        <td>1989</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Univ. of Canterbury</td>
+                                        <td>1989</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Univ. of Kansas</td>
+                                        <td>1990</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Waikato U-19</td>
+                                        <td>1991</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Siena R.F.C.</td>
+                                        <td>1991</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Catholic University</td>
+                                        <td>992,1996</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Buckinghampshire Univ</td>
+                                        <td>1998</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sandhurst Academy</td>
+                                        <td>2007</td>
+                                    </tr>
+                                    <tr>
+                                        <td>British Army Air Corps</td>
+                                        <td>2012</td>
+                                    </tr>
+                                    <tr>
+                                        <td>University of Queensland</td>
+                                        <td>2013</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div  class="panel panel-default transparent_panel">
+                            <div class="panel-body news_history_article">
+                                <h1>Individual honors</h1>
+                                <!-- Table -->
+                                <table class="table">
+                                    <tr>
+                                        <th colspan="2">All-Americans</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Eric Takeuchi</td>
+                                        <td>1992, 1993</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Luke Armstrong</td>
+                                        <td>2000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Brian Kennedy</td>
+                                        <td>2001</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">SCRFU Collegiate Griffins </th>
+                                    </tr>
+                                    <tr>
+                                        <td>John Tellenbach</td>
+                                        <td>1998,1999</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Adam Lekoff</td>
+                                        <td>1990</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Eric Takeuchi</td>
+                                        <td>1990,1991,1992</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mark Bazzett</td>
+                                        <td>1996,1997</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dan Brislin</td>
+                                        <td>1996 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Andy Wilga</td>
+                                        <td>1997,1998,1999,2000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chay Chang</td>
+                                        <td>1998 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Daren Garb</td>
+                                        <td>1998 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Brian Kennedy</td>
+                                        <td>1999,2000,2001</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Luke Armstrong</td>
+                                        <td>2000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nik Cherwink</td>
+                                        <td>2007</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chad Allen</td>
+                                        <td>2008</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">PCRFU Collegiate Grizzlies</th>
+                                    </tr>
+                                    <tr>
+                                        <td>John Tellenbach</td>
+                                        <td>1989</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Eric Takeuchi</td>
+                                        <td>1991,1992</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">U-19 Griffins</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Luke Palmer</td>
+                                        <td>1988</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dan Schmid</td>
+                                        <td>1988</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mike Seike</td>
+                                        <td>1988</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">U-19 Grizzlies</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Luke Palmer</td>
+                                        <td>1988</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dan Schmid</td>
+                                        <td>1988</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">Caps</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Tim Hay-Edie (Bahamas)</td>
+                                        <td>1992</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mark Stenson (Bahamas)</td>
+                                        <td>1992</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Paul Shattles (Norway)</td>
+                                        <td>1995,1996</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">Lifetime Triton Award</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Devon Shea</td>
+                                        <td>1996</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Peter Sertic</td>
+                                        <td>1998</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">San Diego XV</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Mark Stenson</td>
+                                        <td>1991</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Matt Cohen</td>
+                                        <td>1991</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">San Diego Collegiate XV</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Paul Shattles</td>
+                                        <td>1989</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Eric Takeuchi</td>
+                                        <td>1989</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END HISTORY -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <div id="footer" class="container-fluid">
+            <div class="row" id="footer_links"><a href="http://www.bigmarco.net">Big Marco Bail Bonds</a>   |   <a href="http://gccir.com/GCCIR/">GCCIR</a>   |   <a href="http://www.usarugby.org">USA Rugby</a>   |   <a href="http://www.ucsd.edu">UCSD</a>   |   <a href="http://sportsclubs.ucsd.edu/sports/teams/rugbyw/">Triton Women</a> </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>About us</h3>
+                    <p>USC Men's Rugby aspires to be one of the premier collegiate rugby programs in the nation. We’re building a strong, high scoring, professional style, PAC 12 competitive team, are we’re looking for motivated incoming and current USC students to join us. </p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Media</h3>
+                    <div id="social_media_div" class="col-sm-12"> <!-- TODO: link to social media -->
+                        <a href="https://www.facebook.com/ucsdmenrugby?fref=ts">
+                            <i class="fa fa-facebook-square fa-5x"></i>
+                        </a>
+                        <i class="fa fa-twitter-square fa-5x"></i>
+                        <i class="fa fa-envelope fa-5x"></i>
+                        <i class="fa fa-instagram fa-5x"></i>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Next game</h3>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-8"> 
+                                <h2>USD vs UCSD</h2>
+                                <h4>Oct. 10th</h4>
+                                <h4>@USD <small>Manchester Field</small></h4>
+                            </div>
+                            <div id="fixuture_team_logo_bot" class="col-sm-4">
+                                <img id="fixuture_team_logo_bot"  src="./img/San-Diego.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- BOT NAV BAR -->
+                <nav class="navbar navbar-default" id="bot_nav_bar" role="navigation">
+                    <div class="container-fluid">
+                        <!-- bg color: style="background-color: #435AA8;" -->
+                        <div id="bot_nav_top_row" class="row clearfix">
+                            <div class="pull-right">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="./schedule.html">Schedule</a></li> 
+                                    <li><a href="./news.html">News</a></li>
+                                    <li><a href="./team.html">Team</a></li>
+                                    <li><a href="./contact.html">Contact</a></li>
+                                    <li><a target="_blank" href="http://www.active.com/donate/ucsdrugby">Donate</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        
+    </body>
+</html>
