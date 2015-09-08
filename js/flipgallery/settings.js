@@ -153,7 +153,30 @@ var fg_my_content = {
                 image_11: { thumb: 'social/social11tn.png', enlarged: 'social/social11.jpg', text: '' },
                 image_12: { thumb: 'social/social12tn.png', enlarged: 'social/social12.png', text: '' }
                 
-        }
+        }, 
+        gallery_5: {
+                
+                cover_thumb: 'uc_tournament/uc6tn.png',
+                gallery_title: 'UC Tournament',
+                image_1: { thumb: 'uc_tournament/uc1tn.png', enlarged: 'uc_tournament/uc1.JPG', text: '' },
+                image_2: { thumb: 'uc_tournament/uc2tn.png', enlarged: 'uc_tournament/uc2.JPG', text: '' },
+                image_3: { thumb: 'uc_tournament/uc3tn.png', enlarged: 'uc_tournament/uc3.JPG', text: '' },
+                image_4: { thumb: 'uc_tournament/uc4tn.png', enlarged: 'uc_tournament/uc4.JPG', text: '' },
+                image_5: { thumb: 'uc_tournament/uc5tn.png', enlarged: 'uc_tournament/uc5.JPG', text: '' },
+                image_6: { thumb: 'uc_tournament/uc6tn.png', enlarged: 'uc_tournament/uc6.JPG', text: '' },
+                image_7: { thumb: 'uc_tournament/uc7tn.png', enlarged: 'uc_tournament/uc7.JPG', text: '' },
+                image_8: { thumb: 'uc_tournament/uc8tn.png', enlarged: 'uc_tournament/uc8.JPG', text: '' },
+                image_9: { thumb: 'uc_tournament/uc9tn.png', enlarged: 'uc_tournament/uc9.JPG', text: '' },
+                image_10: { thumb: 'uc_tournament/uc10tn.png', enlarged: 'uc_tournament/uc10.JPG', text: '' },
+                image_11: { thumb: 'uc_tournament/uc11tn.png', enlarged: 'uc_tournament/uc11.JPG', text: '' },
+                image_12: { thumb: 'uc_tournament/uc12tn.png', enlarged: 'uc_tournament/uc12.JPG', text: '' },
+                image_13: { thumb: 'uc_tournament/uc13tn.png', enlarged: 'uc_tournament/uc13.JPG', text: '' },
+                image_14: { thumb: 'uc_tournament/uc14tn.png', enlarged: 'uc_tournament/uc14.JPG', text: '' },
+                image_15: { thumb: 'uc_tournament/uc15tn.png', enlarged: 'uc_tournament/uc15.JPG', text: '' },
+                image_16: { thumb: 'uc_tournament/uc16tn.png', enlarged: 'uc_tournament/uc16.JPG', text: '' },
+                image_17: { thumb: 'uc_tournament/uc17tn.png', enlarged: 'uc_tournament/uc17.JPG', text: '' }
+                
+        },
 
 
 };
