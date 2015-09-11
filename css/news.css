@@ -11,6 +11,10 @@
     margin: 10px;
 }
 
+.news_blogs_blog small {
+    float: right;
+}
+
 #news_blog {
     padding-top: 0px;
 }
@@ -39,6 +43,10 @@
     float: right;
     overflow: hidden;
     margin: 10px;
+}
+
+.news_game_reports_report small {
+    float: right;
 }
 
 #news_tabs div a {
