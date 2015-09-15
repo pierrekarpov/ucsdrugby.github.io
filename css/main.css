@@ -116,9 +116,8 @@
 }
 
 #lead_article_img_container {
-    height: 160px;
+    height: 330px;
     width: auto;
-    float: right;
     overflow: hidden;
     margin: 10px;
 }
