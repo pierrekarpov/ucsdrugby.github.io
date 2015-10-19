@@ -115,10 +115,11 @@
     font-weight: 900;
 }
 
-#lead_article_img_container {
-    height: 330px;
+.lead_article_img_container {
+    height: 200px;
     width: auto;
     overflow: hidden;
+    float: right;
     margin: 10px;
 }
 
